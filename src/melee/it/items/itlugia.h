@@ -48,7 +48,6 @@
 /* 3F7EE8 */ extern ItemStateTable it_803F7EE8[];
 /* 3F7F48 */ extern ItemStateTable it_803F7F48[];
 
-/*Changes aeroblast sprite scale [Values approaching 0 result in a larger size]*/
 extern f32 it_804DD490;
 
 #endif
