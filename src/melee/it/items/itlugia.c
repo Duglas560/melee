@@ -175,7 +175,26 @@ bool it_802D246C(Item_GObj* gobj)
     return false;
 }
 
-/// #it_802D24A0
+void it_802D24A0(Item_GObj* gobj)
+{
+    Item* item = GET_ITEM(gobj);
+    enum ItemKind kind = item->kind;
+    f32 scale = it_804DD450;
+    f32* attrs = item->xC4_article_data->x4_specialAttributes;
+    switch (kind) {
+    case Pokemon_Lugia_Aeroblast:
+        scale = attrs[1]; // +0x4 
+        break;
+    case Pokemon_Lugia_Aeroblast2:
+        scale = attrs[2]; // +0x8
+        break;
+    case Pokemon_Lugia_Aeroblast3:
+        scale = attrs[3]; // +0xC
+        break;
+    }
+
+    item->x40_vel.z *= scale;
+}
 
 bool it_802D24FC(Item_GObj* gobj)
 {
