@@ -28,6 +28,22 @@ void it_802B26E0(Item_GObj* gobj)
     it_8026B73C(gobj);
 }
 
+void it_2725_Logic41_PickedUp(Item_GObj* gobj)
+{
+    Item* item = GET_ITEM(gobj);
+    item->xDB0_itcmd_var1 = 0;
+    item->xDAC_itcmd_var0 = 0;
+    if (item->owner != NULL) {
+        if (ftLib_800865CC(gobj) != 1) {
+            Item_80268E5C(gobj, 0, ITEM_ANIM_UPDATE);
+        } else {
+            Item_80268E5C(gobj, 1, ITEM_ANIM_UPDATE);
+        }
+        Item_802694CC(gobj);
+        it_80274574(gobj);
+    }
+}
+
 void it_802B2870(Item_GObj* gobj, Item_GObj* ref_gobj)
 {
     it_8026B894(gobj, ref_gobj);
