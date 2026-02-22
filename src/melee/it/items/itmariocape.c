@@ -1,8 +1,10 @@
 #include "itmariocape.h"
 
 #include "ft/chara/ftMario/ftMr_SpecialS.h"
+#include "ft/ftlib.h"
 #include "it/inlines.h"
 #include "it/it_26B1.h"
+#include "it/it_2725.h"
 #include "it/item.h"
 
 void it_802B2674(Item_GObj* item_gobj)
