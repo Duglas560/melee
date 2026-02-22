@@ -5,6 +5,7 @@
 #include "it/it_266F.h"
 #include "it/it_26B1.h"
 #include "it/it_2725.h"
+#include "gm/gm_1832.h"
 #include "it/itCommonItems.h"
 #include "it/item.h"
 
@@ -64,7 +65,7 @@ Item_GObj* it_802841B4(Item_GObj* gobj, Vec3* pos, s32 arg2)
     }
     if (item_gobj != NULL) {
         Item* it = GET_ITEM(item_gobj);
-        it->xDD4_itemVar.tomato.x4.b0 = true;
+        it->xDD4_itemVar.tomato.x4.bits.b0 = true;
         it->xDD4_itemVar.tomato.x8 = arg2;
     }
     return item_gobj;
@@ -88,7 +89,7 @@ void itTomato_Logic9_Spawned(Item_GObj* gobj)
     item->x40_vel.z = 0.0F;
 
     item->xDD4_itemVar.tomato.heal_amount = sa->x0;
-    item->xDD4_itemVar.tomato.x4.b0 = false;
+    item->xDD4_itemVar.tomato.x4.bits.b0 = false;
     item->xDD4_itemVar.tomato.x8 = 0;
 
     it_80284358(gobj);
