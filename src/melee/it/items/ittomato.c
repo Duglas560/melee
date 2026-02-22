@@ -96,14 +96,11 @@ void itTomato_Logic9_Spawned(Item_GObj* gobj)
 
 void itTomato_Logic9_Destroyed(Item_GObj* gobj)
 {
-    Item* item = GET_ITEM(gobj);
-    // if ((((temp_r4->xDD4_itemVar.Egg.filler[4] << 0x18) & 0xC0000000) >>
-    //      0x1F) != 0)
-    // {
-    //     M2C_FIELD(
-    //         (&gm_80473A18 + M2C_BITWISE(s32,
-    //         temp_r4->xDD4_itemVar.star.x8)), s8*, 0x90) = 0;
-    // }
+  Item* item = GET_ITEM(gobj);
+
+    if (item->xDD4_itemVar.tomato.x4.bits.b0) {    
+        gm_80473A18.x90[item->xDD4_itemVar.tomato.x8] = 0;
+    }
 }
 
 void it_80284358(Item_GObj* gobj)
