@@ -98,7 +98,7 @@ void itTomato_Logic9_Destroyed(Item_GObj* gobj)
 {
   Item* item = GET_ITEM(gobj);
 
-    if (item->xDD4_itemVar.tomato.x4.bits.b0) {    
+    if (item->xDD4_itemVar.tomato.x4.bits.b0) {
         gm_80473A18.x90[item->xDD4_itemVar.tomato.x8] = 0;
     }
 }
